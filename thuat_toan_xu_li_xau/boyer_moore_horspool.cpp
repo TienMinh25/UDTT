@@ -1,6 +1,5 @@
 #include <iostream>
-#include <vector>
-
+#include <string>
 using namespace std;
 
 int char_in_string(char c, string P)
