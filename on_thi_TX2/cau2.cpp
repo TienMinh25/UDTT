@@ -79,7 +79,7 @@ int main()
         cout << "So tien khong du de mua bat ki cai quat nao.";
     else
     {
-        cout << "Tong so quat co the mua: " << result.size() << endl;
+        cout << "Tong so quat it nhat mua duoc de tong so tien dung bang p la: " << result.size() << endl;
         cout << "Danh sach quat duoc mua bao gom: " << endl;
         hienThiTieuDe();
         for (int i = 0; i < result.size(); i++)
