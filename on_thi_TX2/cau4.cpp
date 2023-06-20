@@ -39,7 +39,7 @@ void hienThiTieuDe()
     cout << endl;
 }
 
-vector<vector<int>> dynamic(vector<DT> listDT, int S)
+vector<vector<int> > dynamic(vector<DT> listDT, int S)
 {
     // dp[i][j] la khi xet den do vat thu i, co tong kich thuoc la j
     // hien thi cho gia tri cua do vat da lay
@@ -76,7 +76,7 @@ vector<DT> truyVetKetQua(vector<vector<int>> dp, vector<DT> listDT, int s)
     {
         if (dp[i][j] != dp[i - 1][j])
         {
-            result.push_back(listDT[i]);
+            result.push_back(listDT[i - 1]);
             j = j - listDT[i].kichThuoc;
         }
         i--;
@@ -99,7 +99,7 @@ int main()
     cout << "Nhap vao kich thuoc cai tui: " << endl;
     cin >> s;
 
-    vector<vector<int>> dp(n + 1, vector<int>(s + 1));
+    vector<vector<int> > dp(n + 1, vector<int>(s + 1));
     dp = dynamic(listDT, s);
     vector<DT> result = truyVetKetQua(dp, listDT, s);
     cout << "So dien thoai co the lay duoc la: " << result.size() << endl;
